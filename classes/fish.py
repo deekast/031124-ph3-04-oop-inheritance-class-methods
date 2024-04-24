@@ -16,3 +16,10 @@ class Fish:
     @classmethod 
     def num_fish(cls):
         return len(cls.all_fish)
+
+    @classmethod
+    def all_fish_names(cls):
+        names = []
+        for fish in cls.all_fish:
+            names.append(fish.name)
+        return names
