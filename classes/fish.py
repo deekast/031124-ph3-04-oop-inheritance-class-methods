@@ -23,3 +23,11 @@ class Fish:
         for fish in cls.all_fish:
             names.append(fish.name)
         return names
+    
+    @classmethod
+    def average_length(cls):
+        lengths = []
+        for fish in cls.all_fish:
+            lengths.append(fish.length_in_inches)
+        average = sum(lengths) / len(lengths)
+        return average
